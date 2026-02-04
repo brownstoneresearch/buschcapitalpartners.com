@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Busch Capital Partners | Strategy-Led Wealth Management</title>
+
+  <!-- High-productivity SEO/meta -->
+  <meta name="description" content="Busch Capital Partners — strategy-led wealth management built for evolving markets. Disciplined portfolio construction, risk-first oversight, and forward-looking diversification." />
+  <meta name="keywords" content="Busch Capital Partners, David Busch, portfolio strategy, wealth management, risk management, blockchain ETFs, gold, bitcoin ETF, institutional investing, BrokerCheck, FINRA" />
+  <meta name="author" content="Busch Capital Partners" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0A1929" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://buschcapitalpartners.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="Busch Capital Partners" />
+  <meta property="og:title" content="Busch Capital Partners | Strategy-Led Wealth Management" />
+  <meta property="og:description" content="Markets evolve. Strategy must evolve faster." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buschcapitalpartners.com/" />
+  <meta property="og:image" content="https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Busch Capital Partners | Strategy-Led Wealth Management" />
+  <meta name="twitter:description" content="Markets evolve. Strategy must evolve faster." />
+  <meta name="twitter:image" content="https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg" />
+  <link rel="apple-touch-icon" href="https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FinancialService",
+    "name":"Busch Capital Partners",
+    "url":"https://buschcapitalpartners.com/",
+    "description":"Strategy-led wealth management built for evolving markets. Disciplined portfolio construction, risk-first oversight, and forward-looking diversification.",
+    "image":"https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg",
+    "areaServed":"US",
+    "brand":{"@type":"Brand","name":"Busch Capital Partners"}
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#060A12;
+      --bg2:#0A1929;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.10);
+      --stroke: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --faint: rgba(255,255,255,.50);
+      --gold: #C6A34E;
+      --gold2:#E8D8B6;
+      --shadow-sm: 0 8px 22px rgba(0,0,0,.25);
+      --shadow-md: 0 18px 55px rgba(0,0,0,.35);
+      --shadow-lg: 0 30px 85px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 24px;
+      --container: 1300px;
+      --ticker-h: 44px;
+      --header-h: 92px;
+      --ease: cubic-bezier(.22,.61,.36,1);
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at 20% 10%, rgba(198,163,78,.15), transparent 45%),
+                  radial-gradient(circle at 80% 35%, rgba(198,163,78,.08), transparent 50%),
+                  linear-gradient(180deg, var(--bg) 0%, #070C16 40%, #050810 100%);
+      color: var(--text);
+      overflow-x:hidden;
+    }
+    a{ color: inherit; text-decoration:none; }
+    ul{ list-style:none; }
+    .container{ width:92%; max-width: var(--container); margin:0 auto; padding:0 20px; }
+
+    /* Top Live Ticker Bar */
+    .tickerbar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1200;
+      height: var(--ticker-h);
+      display:flex;
+      align-items:center;
+      background: rgba(10,25,41,.82);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+    }
+    .tickerbar .wrap{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      width: 100%;
+    }
+    .tick-badge{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(198,163,78,.28);
+      background: rgba(198,163,78,.10);
+      color: rgba(255,255,255,.92);
+      font-weight: 800;
+      font-size: .92rem;
+      white-space: nowrap;
+      margin-left: 4px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
+    }
+    .tick-badge i{ color: var(--gold); }
+    .tick-meta{
+      font-size: .9rem;
+      color: rgba(255,255,255,.72);
+      white-space: nowrap;
+      display:none;
+    }
+    @media (min-width: 1100px){
+      .tick-meta{ display:block; }
+    }
+    .tick-strip{
+      flex:1;
+      overflow:hidden;
+      position: relative;
+      mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    }
+    .tick-row{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      will-change: transform;
+      animation: marquee 42s linear infinite;
+    }
+    .tick-row:hover{ animation-play-state: paused; }
+    @keyframes marquee{
+      from{ transform: translateX(0); }
+      to{ transform: translateX(-50%); }
+    }
+    .tick-item{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 8px 18px rgba(0,0,0,.18);
+      white-space: nowrap;
+      font-size: .92rem;
+    }
+    .tick-item strong{ font-weight: 900; letter-spacing:.2px; }
+    .tick-item .px{ font-weight: 800; color: rgba(255,255,255,.92); }
+    .tick-item .ch{ font-weight: 900; }
+    .up{ color: #54f0a8; }
+    .dn{ color: #ff6b6b; }
+    .flat{ color: rgba(255,255,255,.72); }
+
+    /* ====== BEAUTIFIED HEADER (UPGRADED) ====== */
+    header{
+      position: fixed;
+      top: var(--ticker-h);
+      left:0; right:0;
+      height: var(--header-h);
+      z-index: 1100;
+      display:flex;
+      align-items:center;
+      background:
+        radial-gradient(circle at 18% 30%, rgba(198,163,78,.14), transparent 55%),
+        radial-gradient(circle at 85% 10%, rgba(134,183,255,.08), transparent 60%),
+        linear-gradient(180deg, rgba(6,10,18,.68), rgba(6,10,18,.55));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(16px);
+      transition: all .35s var(--ease);
+    }
+    header:before{
+      content:'';
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg, rgba(198,163,78,.06), transparent 30%, transparent 70%, rgba(198,163,78,.06)),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0px, rgba(255,255,255,.06) 1px, transparent 1px, transparent 10px);
+      opacity:.12;
+      pointer-events:none;
+    }
+    header.scrolled{
+      background:
+        radial-gradient(circle at 18% 30%, rgba(198,163,78,.10), transparent 55%),
+        radial-gradient(circle at 85% 10%, rgba(134,183,255,.06), transparent 60%),
+        linear-gradient(180deg, rgba(6,10,18,.86), rgba(6,10,18,.70));
+      box-shadow: var(--shadow-sm);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      position:relative;
+      z-index:2;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      min-width: 270px;
+    }
+    .logoMark{
+      width: 48px; height: 48px;
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(198,163,78,.45);
+      box-shadow: 0 18px 45px rgba(0,0,0,.45);
+      position: relative;
+      flex:0 0 auto;
+      transform: translateZ(0);
+    }
+    .logoMark img{
+      width:100%; height:100%;
+      object-fit:cover;
+      transform: scale(1.06);
+      filter: contrast(1.08) saturate(1.03);
+    }
+    .logoMark:after{
+      content:'';
+      position:absolute; inset:-1px;
+      background:
+        radial-gradient(circle at 30% 22%, rgba(198,163,78,.28), transparent 58%),
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.42));
+      pointer-events:none;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .brand .name{
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 800;
+      font-size: 2.05rem;
+      letter-spacing:.6px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      -webkit-background-clip:text; background-clip:text;
+      color: transparent;
+      text-shadow: 0 24px 60px rgba(0,0,0,.25);
+    }
+    .brand .tag{
+      margin-top: 5px;
+      font-size: .88rem;
+      color: rgba(255,255,255,.74);
+      letter-spacing: .7px;
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .brand .tag:before{
+      content:'';
+      width: 18px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      border-radius: 999px;
+      opacity:.9;
+    }
+
+    .navlinks{
+      display:flex;
+      gap: 22px;
+      align-items:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 14px 32px rgba(0,0,0,.25);
+    }
+    .navlinks a{
+      font-weight: 800;
+      color: rgba(255,255,255,.90);
+      position: relative;
+      padding: 8px 10px;
+      font-size: 1.01rem;
+      border-radius: 999px;
+      transition: background .25s var(--ease), transform .25s var(--ease);
+    }
+    .navlinks a:hover{
+      background: rgba(198,163,78,.10);
+      transform: translateY(-1px);
+    }
+    .navlinks a:after{
+      content:'';
+      position:absolute;
+      left: 10px; right: 10px;
+      bottom: 4px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s var(--ease);
+      opacity:.95;
+    }
+    .navlinks a:hover:after,
+    .navlinks a.active:after{ transform: scaleX(1); }
+
+    .navcta{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 16px;
+      font-weight: 900;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.94);
+      cursor: pointer;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
+      box-shadow: 0 14px 35px rgba(0,0,0,.28);
+      user-select:none;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--gold), #D4AF37);
+      color: rgba(10,25,41,.95);
+      border-color: rgba(198,163,78,.45);
+      position: relative;
+      overflow:hidden;
+    }
+    .btn.primary:before{
+      content:'';
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.20), transparent);
+      transform: translateX(-120%);
+      transition: transform .55s var(--ease);
+    }
+    .btn.primary:hover:before{ transform: translateX(120%); }
+    .btn.ghost{
+      background: rgba(255,255,255,.04);
+    }
+
+    .quickActions{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 14px 32px rgba(0,0,0,.25);
+    }
+    .iconBtn{
+      width: 44px; height: 44px;
+      border-radius: 16px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      color: rgba(255,255,255,.92);
+      cursor:pointer;
+      transition: transform .25s var(--ease), box-shadow .35s var(--ease), background .25s var(--ease);
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
+    }
+    .iconBtn:hover{
+      transform: translateY(-3px);
+      background: rgba(198,163,78,.10);
+      box-shadow: var(--shadow-md);
+    }
+    .iconBtn i{ color: rgba(255,255,255,.92); }
+    .iconBtn.gold i{ color: var(--gold); }
+
+    .mobileBtn{
+      display:none;
+      border:none;
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.92);
+      border-radius: 16px;
+      padding: 12px 14px;
+      cursor:pointer;
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .mobileBtn:hover{ background: rgba(198,163,78,.10); }
+
+    /* Pages */
+    main{ padding-top: calc(var(--ticker-h) + var(--header-h)); }
+    .page{ display:none; min-height: calc(100vh - (var(--ticker-h) + var(--header-h))); }
+    .page.active{ display:block; }
+    section{ padding: 108px 0; }
+
+    .sectionTitle{
+      font-family: "Cormorant Garamond", serif;
+      font-size: 3.3rem;
+      letter-spacing: -0.6px;
+      margin-bottom: 14px;
+      position: relative;
+      display:inline-block;
+    }
+    .sectionTitle:after{
+      content:'';
+      position:absolute;
+      left:0; bottom:-12px;
+      width: 92px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: .9;
+    }
+    .center{ text-align:center; }
+    .center .sectionTitle:after{ left:50%; transform: translateX(-50%); }
+    .subTitle{
+      max-width: 920px;
+      margin: 0 auto;
+      margin-top: 18px;
+      font-size: 1.15rem;
+      color: rgba(255,255,255,.76);
+      line-height: 1.75;
+      font-weight: 400;
+    }
+
+    /* Hero */
+    .hero{
+      position: relative;
+      min-height: 920px;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      background:
+        linear-gradient(135deg, rgba(6,10,18,.86) 0%, rgba(10,25,41,.78) 55%, rgba(6,10,18,.88) 100%),
+        url('https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg') center/cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .hero:before{
+      content:'';
+      position:absolute; inset:-40%;
+      background:
+        radial-gradient(circle at 22% 28%, rgba(198,163,78,.22), transparent 55%),
+        radial-gradient(circle at 78% 65%, rgba(198,163,78,.10), transparent 60%);
+      transform: rotate(-8deg);
+      pointer-events:none;
+    }
+    .hero:after{
+      content:'';
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0px, rgba(255,255,255,.06) 1px, transparent 1px, transparent 10px);
+      opacity: .18;
+      pointer-events:none;
+    }
+    .heroGrid{
+      position: relative;
+      z-index: 2;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 26px;
+      align-items: start;
+    }
+    .eyebrow{
+      display:inline-flex;
+      gap: 10px;
+      align-items:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(198,163,78,.30);
+      background: rgba(198,163,78,.10);
+      color: rgba(255,255,255,.92);
+      font-weight: 900;
+      font-size: .95rem;
+      letter-spacing:.3px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.30);
+    }
+    .eyebrow i{ color: var(--gold); }
+    .hero h1{
+      margin-top: 16px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 4.6rem;
+      line-height: 1.02;
+      letter-spacing: -0.9px;
+      color: rgba(255,255,255,.96);
+      text-shadow: 0 18px 60px rgba(0,0,0,.45);
+    }
+    .hero p{
+      margin-top: 18px;
+      max-width: 760px;
+      font-size: 1.25rem;
+      color: rgba(255,255,255,.82);
+      line-height: 1.75;
+    }
+    .heroBtns{ display:flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+
+    .heroStats{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .stat{
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 28px rgba(0,0,0,.22);
+      min-width: 160px;
+    }
+    .stat .n{
+      font-family:"Cormorant Garamond", serif;
+      font-size: 2.2rem;
+      color: var(--gold);
+      font-weight: 900;
+      line-height: 1;
+    }
+    .stat .l{
+      margin-top: 6px;
+      color: rgba(255,255,255,.72);
+      font-size: .95rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .glassCard{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow-lg);
+      overflow:hidden;
+      position: sticky;
+      top: calc(var(--ticker-h) + var(--header-h) + 18px);
+    }
+    .glassHead{
+      padding: 18px 18px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: radial-gradient(circle at 20% 10%, rgba(198,163,78,.16), transparent 55%),
+                  linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    }
+    .glassHead h3{
+      font-family:"Cormorant Garamond", serif;
+      font-size: 1.65rem;
+      letter-spacing: -.3px;
+    }
+    .glassHead p{
+      margin-top: 6px;
+      color: rgba(255,255,255,.72);
+      font-size: .98rem;
+      line-height: 1.6;
+    }
+    .kpis{
+      padding: 16px 18px 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .kpi{
+      padding: 14px 14px;
+      border-radius: 18px;
+      background: rgba(6,10,18,.45);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 14px 30px rgba(0,0,0,.25);
+    }
+    .kpi strong{ display:block; color: rgba(255,255,255,.92); font-size: 1.02rem; }
+    .kpi span{ display:block; margin-top: 6px; color: rgba(255,255,255,.70); font-size: .92rem; }
+
+    /* Insight row (homepage) */
+    .insightsRow{
+      margin-top: 26px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .insightCard{
+      border-radius: 20px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+      box-shadow: var(--shadow-sm);
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+      cursor:pointer;
+      min-height: 210px;
+      display:flex;
+      flex-direction: column;
+    }
+    .insightCard:hover{
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(198,163,78,.30);
+    }
+    .insImg{
+      height: 120px;
+      background: rgba(255,255,255,.04);
+      position: relative;
+    }
+    .insImg img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      filter: contrast(1.05) saturate(1.04);
+      transform: scale(1.02);
+    }
+    .insImg:after{
+      content:'';
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.55));
+    }
+    .insBody{
+      padding: 14px 14px 14px;
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+      flex:1;
+    }
+    .insTitle{
+      font-weight: 900;
+      color: rgba(255,255,255,.92);
+      line-height: 1.25;
+      font-size: 1.02rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .insMeta{
+      margin-top: auto;
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: rgba(255,255,255,.62);
+      font-size: .88rem;
+    }
+    .tagPill{
+      display:inline-flex;
+      align-items:center;
+      gap: 7px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(198,163,78,.22);
+      background: rgba(198,163,78,.10);
+      color: rgba(255,255,255,.90);
+      font-weight: 900;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+    .tagPill i{ color: var(--gold); }
+
+    /* Content sections */
+    .panel{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow-md);
+      overflow:hidden;
+    }
+    .panel .head{
+      padding: 22px 22px 18px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: radial-gradient(circle at 20% 10%, rgba(198,163,78,.14), transparent 55%),
+                  linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    }
+    .panel .head h3{
+      font-family:"Cormorant Garamond", serif;
+      font-size: 2rem;
+      letter-spacing: -.4px;
+    }
+    .panel .head p{
+      margin-top: 8px;
+      color: rgba(255,255,255,.74);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .panel .body{ padding: 20px 22px 22px; }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      padding: 18px 18px;
+      border-radius: 18px;
+      background: rgba(6,10,18,.42);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 14px 30px rgba(0,0,0,.24);
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+    }
+    .card:hover{ transform: translateY(-10px); box-shadow: var(--shadow-lg); border-color: rgba(198,163,78,.30); }
+    .card h4{
+      font-family:"Cormorant Garamond", serif;
+      font-size: 1.55rem;
+      letter-spacing: -.2px;
+      margin-bottom: 8px;
+    }
+    .card p{ color: rgba(255,255,255,.72); }
+
+    .bullets{ display:flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+    .b{
+      display:flex; gap: 10px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .b i{ color: var(--gold); margin-top: 3px; }
+    .b div{ color: rgba(255,255,255,.74); }
+
+    /* Founder page image */
+    .aboutGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items:start;
+    }
+    .founderImg{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border: 1px solid rgba(198,163,78,.22);
+      box-shadow: var(--shadow-lg);
+      min-height: 640px;
+      background: rgba(255,255,255,.06);
+      position: relative;
+    }
+    .founderImg img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      filter: contrast(1.06) saturate(1.02);
+    }
+    .founderImg:after{
+      content:'';
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 22% 18%, rgba(198,163,78,.20), transparent 55%),
+                  linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.62));
+      pointer-events:none;
+    }
+    .badge{
+      position:absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 2;
+      padding: 12px 14px;
+      border-radius: 16px;
+      font-weight: 900;
+      color: rgba(10,25,41,.95);
+      background: linear-gradient(135deg, var(--gold), #D4AF37);
+      border: 1px solid rgba(198,163,78,.35);
+      box-shadow: 0 18px 45px rgba(0,0,0,.38);
+    }
+
+    /* Contact */
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items:start;
+    }
+    .field{
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .field label{
+      color: rgba(255,255,255,.75);
+      font-weight: 900;
+      font-size: .95rem;
+    }
+    input, select, textarea{
+      width:100%;
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.92);
+      outline:none;
+      transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+      font-size: 1rem;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(198,163,78,.45);
+      box-shadow: 0 0 0 4px rgba(198,163,78,.12);
+    }
+    textarea{ resize: vertical; min-height: 130px; }
+
+    .toast{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1400;
+      width: min(420px, calc(100vw - 32px));
+      border-radius: 18px;
+      padding: 14px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(10,25,41,.88);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-lg);
+      display:none;
+    }
+    .toast.show{ display:block; }
+    .toast .tHead{ display:flex; align-items:center; gap: 10px; font-weight: 900; }
+    .toast .tHead i{ color: var(--gold); }
+    .toast p{ margin-top: 8px; color: rgba(255,255,255,.72); }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 70px 0 44px;
+      background: linear-gradient(180deg, rgba(10,25,41,.45), rgba(6,10,18,.95));
+    }
+    .footGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 18px;
+    }
+    .footTitle{
+      font-family:"Cormorant Garamond", serif;
+      font-size: 1.9rem;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      -webkit-background-clip:text; background-clip:text;
+      color: transparent;
+      font-weight: 900;
+    }
+    .foot p{ color: rgba(255,255,255,.70); margin-top: 10px; }
+    .footLinks h4{ margin-bottom: 10px; font-weight: 900; color: rgba(255,255,255,.92); }
+    .footLinks a{
+      display:block;
+      padding: 8px 0;
+      color: rgba(255,255,255,.72);
+      font-weight: 700;
+      transition: transform .25s var(--ease), color .25s var(--ease);
+    }
+    .footLinks a:hover{ color: rgba(255,255,255,.95); transform: translateX(6px); }
+
+    .disclaimer{
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.62);
+      font-size: .95rem;
+      line-height: 1.7;
+      text-align:center;
+      max-width: 980px;
+      margin-left:auto; margin-right:auto;
+    }
+
+    /* Mobile */
+    @media (max-width: 1100px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .glassCard{ position: relative; top:auto; }
+      .insightsRow{ grid-template-columns: repeat(2,1fr); }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .aboutGrid{ grid-template-columns: 1fr; }
+      .contactGrid{ grid-template-columns: 1fr; }
+      .footGrid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 980px){
+      .navlinks{
+        display:none;
+        position:absolute;
+        top: calc(var(--ticker-h) + var(--header-h));
+        left: 0;
+        right: 0;
+        padding: 16px 16px;
+        background: rgba(6,10,18,.96);
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        backdrop-filter: blur(14px);
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 0 0 20px 20px;
+      }
+      .navlinks.active{ display:flex; }
+      .navlinks a{ width:100%; text-align:center; padding: 12px 12px; }
+      .navlinks a:after{ left: 18px; right: 18px; bottom: 8px; }
+      .navcta .btn{ display:none; }
+      .quickActions{ display:none; }
+      .mobileBtn{ display:inline-flex; }
+      .hero h1{ font-size: 3.35rem; }
+      .navlinks{ border-radius: 0; box-shadow: var(--shadow-lg); }
+    }
+    @media (max-width: 520px){
+      .insightsRow{ grid-template-columns: 1fr; }
+      .hero{ min-height: 860px; }
+      .hero h1{ font-size: 2.9rem; }
+      .brand .name{ font-size: 1.75rem; }
+      .brand .tag{ display:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Live Ticker -->
+  <div class="tickerbar" aria-label="Live Market Ticker">
+    <div class="container wrap">
+      <div class="tick-badge"><i class="fa-solid fa-signal"></i> Live Markets</div>
+      <div class="tick-meta" id="tickMeta">Updating…</div>
+      <div class="tick-strip">
+        <div class="tick-row" id="tickRow"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Beautified) -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo" data-page="home" aria-label="Busch Capital Partners Home">
+          <div class="logoMark">
+            <img src="https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg" alt="Busch Capital Partners" />
+          </div>
+          <div class="brand">
+            <div class="name">Busch Capital Partners</div>
+            <div class="tag">Markets evolve. Strategy must evolve faster.</div>
+          </div>
+        </a>
+
+        <ul class="navlinks" id="navLinks">
+          <li><a href="#founder" data-page="founder">Founder</a></li>
+          <li><a href="#philosophy" data-page="philosophy">Philosophy</a></li>
+        </ul>
+
+        <div class="navcta">
+          <!-- Quick action icons (desktop) -->
+          <div class="quickActions" aria-label="Quick actions">
+            <a class="iconBtn gold" href="#finra" data-page="finra" title="FINRA Verification">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a class="iconBtn" href="#approach" data-page="approach" title="Strategy">
+              <i class="fa-solid fa-diagram-project"></i>
+            </a>
+            <a class="iconBtn" href="#journey" data-page="journey" title="Client Journey">
+              <i class="fa-solid fa-route"></i>
+            </a>
+          </div>
+
+          <a class="btn primary" href="#engage" data-page="engage">
+            <i class="fa-solid fa-calendar-check"></i> Consult
+          </a>
+
+          <button class="mobileBtn" id="mobileBtn" aria-label="Open Menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE: HOME -->
+    <div class="page active" id="page-home" data-page="home">
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="heroGrid">
+            <div>
+              <div class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Institutional discipline • Risk-first thinking • Innovation-aware</div>
+
+              <h1>Markets evolve.<br/>Strategy must evolve faster.</h1>
+
+              <p>
+                In an era defined by rapid technological advancement, digital transformation, and shifting global capital flows,
+                a portfolio demands more than diversification by tradition. It requires <strong>discipline</strong>, <strong>adaptability</strong>,
+                and a forward-looking framework grounded in institutional experience.
+              </p>
+
+              <div class="heroBtns">
+                <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> Explore My Strategy</a>
+                <a class="btn" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify (BrokerCheck)</a>
+                <a class="btn ghost" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Talk to Me</a>
+              </div>
+
+              <div class="heroStats">
+                <div class="stat">
+                  <div class="n" id="statA">—</div>
+                  <div class="l">Markets Tracked</div>
+                </div>
+                <div class="stat">
+                  <div class="n" id="statB">Live</div>
+                  <div class="l">Price Updates</div>
+                </div>
+                <div class="stat">
+                  <div class="n" id="statC">—</div>
+                  <div class="l">Insights Feed</div>
+                </div>
+              </div>
+
+              <!-- Insights Preview Row -->
+              <div style="margin-top:28px;">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                  <div class="tagPill"><i class="fa-solid fa-bolt"></i> Live Insights</div>
+                  <div style="color:rgba(255,255,255,.66); font-weight:800; font-size:.95rem;" id="insMeta">Loading latest headlines…</div>
+                </div>
+
+                <div class="insightsRow" id="insightsRow" aria-label="Insight previews"></div>
+              </div>
+            </div>
+
+            <!-- Sticky Strategy Card -->
+            <div class="glassCard" aria-label="Strategy quick frame">
+              <div class="glassHead">
+                <h3>“From Complexity to Clarity”</h3>
+                <p>
+                  A disciplined framework that helps investors navigate complexity, manage risk intelligently,
+                  and capture opportunity across market cycles.
+                </p>
+              </div>
+              <div class="kpis">
+                <div class="kpi">
+                  <strong>Intelligent Diversification</strong>
+                  <span>Correlation • Liquidity • Duration • Geography • Innovation exposure</span>
+                </div>
+                <div class="kpi">
+                  <strong>Technology Awareness</strong>
+                  <span>AI • Automation • FinTech • Infrastructure shifts</span>
+                </div>
+                <div class="kpi">
+                  <strong>Risk-First Thinking</strong>
+                  <span>Rates • FX • Liquidity stress • Downside planning</span>
+                </div>
+                <div class="kpi">
+                  <strong>Institutional Discipline</strong>
+                  <span>Execution logic informed by large-scale capital markets experience</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Who this is for -->
+      <section>
+        <div class="container">
+          <div class="panel">
+            <div class="head">
+              <h3>Who this is for</h3>
+              <p>
+                Designed for investors seeking <strong>structure and growth</strong>—not shortcuts. This framework is suited for professionals
+                navigating complex market environments and clients focused on long-term growth with controlled risk.
+              </p>
+            </div>
+            <div class="body">
+              <div class="grid3">
+                <div class="card">
+                  <h4>Disciplined Diversification</h4>
+                  <p>Investors who want diversification measured by behavior and correlation—not labels alone.</p>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Balance across liquidity + duration</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Understand what moves together (and when)</div></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>Institutional-Grade Thinking</h4>
+                  <p>Clients who value a repeatable framework and clear decision rules.</p>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk budgets before return targets</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Rules that hold up under stress</div></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>Innovation-Aware Allocation</h4>
+                  <p>Those who recognize technology reshapes asset behavior and capital flows.</p>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>AI + automation effects on sectors</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Digital infrastructure + new market structure</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> Read the Strategy</a>
+                <a class="btn" href="#engage" data-page="engage"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What this is/isn't -->
+      <section>
+        <div class="container">
+          <div class="panel">
+            <div class="head">
+              <h3>What this is (and isn’t)</h3>
+              <p>
+                <strong>“A Framework, Not a Shortcut”</strong> — The content here is intended to share strategic insight and portfolio construction philosophy.
+                It is not about copying positions; it is about understanding how portfolios are built to adapt to a fast-changing global economy.
+              </p>
+            </div>
+            <div class="body">
+              <div class="grid2">
+                <div class="card">
+                  <h4>What it is</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>A disciplined framework for decision-making</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Innovation-aware diversification approach</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk-first portfolio construction philosophy</div></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>What it isn’t</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-xmark"></i><div>A promise of performance</div></div>
+                    <div class="b"><i class="fa-solid fa-xmark"></i><div>A signal service to copy trades</div></div>
+                    <div class="b"><i class="fa-solid fa-xmark"></i><div>Individualized investment advice on a webpage</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:16px;" class="card">
+                <h4>Ready to explore my strategy?</h4>
+                <p>Gain insight into a disciplined, forward-looking approach to diversification designed for a technology-driven world.</p>
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+                  <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-compass"></i> Explore Strategy</a>
+                  <a class="btn ghost" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verification</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: FOUNDER -->
+    <div class="page" id="page-founder" data-page="founder">
+      <section id="founder">
+        <div class="container">
+          <div class="center">
+            <div class="sectionTitle">David Busch</div>
+            <p class="subTitle">
+              Institutional discipline. Risk-first decision-making. Clear communication—built for a world where innovation reshapes markets fast.
+            </p>
+          </div>
+
+          <div style="margin-top:22px;" class="aboutGrid">
+            <div class="founderImg">
+              <img src="https://site.citywire.com/hubfs/scottsdale%20speakers_David%20Busch.jpg" alt="David Busch" />
+              <div class="badge">Founder & Chief Investment Officer</div>
+            </div>
+
+            <div class="panel">
+              <div class="head">
+                <h3>Leadership & Intent</h3>
+                <p>
+                  I built Busch Capital Partners around a single belief: the best portfolios are built to endure. That means clarity of purpose,
+                  honest risk ranges, and a strategic framework that adapts as markets evolve.
+                </p>
+              </div>
+              <div class="body">
+                <div class="card">
+                  <h4>My focus</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div><strong>Strategy:</strong> portfolio construction built for changing cycles</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div><strong>Risk:</strong> assess rates, FX, liquidity stress before returns are pursued</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div><strong>Communication:</strong> clarity that’s human and actionable</div></div>
+                  </div>
+                </div>
+
+                <div class="card" style="margin-top:14px;">
+                  <h4>What clients value</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Framework-driven decisions—not chasing headlines</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Innovation-aware lens across asset behavior</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk budgets and guardrails defined upfront</div></div>
+                  </div>
+                </div>
+
+                <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+                  <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> My Strategy</a>
+                  <a class="btn" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify</a>
+                  <a class="btn ghost" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;" class="panel">
+            <div class="head">
+              <h3>“From Complexity to Clarity”</h3>
+              <p>
+                Financial markets are interconnected, fast-moving, and increasingly influenced by innovation and data. My strategic framework focuses on:
+              </p>
+            </div>
+            <div class="body">
+              <div class="grid2">
+                <div class="card">
+                  <h4>How technology reshapes assets</h4>
+                  <p>Understanding how AI, automation, fintech and evolving infrastructure alter correlation, liquidity, and behavior.</p>
+                </div>
+                <div class="card">
+                  <h4>Balance growth and risk</h4>
+                  <p>Maintain exposure to structural trends while keeping risk measurable and controlled.</p>
+                </div>
+                <div class="card">
+                  <h4>Align capital to long-term trends</h4>
+                  <p>Position portfolios around durable themes rather than short-term excitement.</p>
+                </div>
+                <div class="card">
+                  <h4>Stay flexible</h4>
+                  <p>Markets change quickly—portfolio construction must be able to adapt without losing discipline.</p>
+                </div>
+              </div>
+              <div style="margin-top:14px;" class="card">
+                <h4>The goal</h4>
+                <p>
+                  The goal is not to chase performance, but to build resilient portfolios positioned to adapt and endure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: STRATEGY / APPROACH -->
+    <div class="page" id="page-approach" data-page="approach">
+      <section id="approach">
+        <div class="container">
+          <div class="center">
+            <div class="sectionTitle">My Strategy Approach</div>
+            <p class="subTitle">
+              <strong>“Markets evolve. Strategy must evolve faster.”</strong><br/>
+              A portfolio requires more than diversification by tradition. It requires discipline, adaptability, and a forward-looking framework.
+            </p>
+          </div>
+
+          <div style="margin-top:22px;" class="panel">
+            <div class="head">
+              <h3>My Philosophy</h3>
+              <p><strong>“From Complexity to Clarity”</strong></p>
+            </div>
+            <div class="body">
+              <div class="card">
+                <p style="color: rgba(255,255,255,.78); font-size: 1.06rem; line-height:1.8;">
+                  Financial markets are interconnected, fast-moving, and increasingly influenced by innovation and data.
+                  My strategic framework focuses on:
+                </p>
+                <div class="bullets" style="margin-top:12px;">
+                  <div class="b"><i class="fa-solid fa-check"></i><div>Understanding how technology reshapes asset behavior</div></div>
+                  <div class="b"><i class="fa-solid fa-check"></i><div>Balancing growth opportunities with risk management</div></div>
+                  <div class="b"><i class="fa-solid fa-check"></i><div>Aligning capital with long-term structural trends</div></div>
+                  <div class="b"><i class="fa-solid fa-check"></i><div>Maintaining flexibility in changing market conditions</div></div>
+                </div>
+              </div>
+
+              <div class="card" style="margin-top:14px;">
+                <h4>The objective</h4>
+                <p>
+                  The goal is not to chase performance but to build resilient portfolios positioned to adapt and endure.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;" class="panel">
+            <div class="head">
+              <h3>My Strategic Pillars</h3>
+              <p>Core principles of my investment strategy</p>
+            </div>
+            <div class="body">
+              <div class="grid2">
+                <div class="card">
+                  <h4>Intelligent Diversification</h4>
+                  <p>Diversification goes beyond asset labels. It considers correlation, liquidity, duration, geography, and exposure to innovation-driven growth.</p>
+                </div>
+                <div class="card">
+                  <h4>Technology & Innovation Awareness</h4>
+                  <p>Digital transformation impacts every asset class. Portfolio construction must reflect AI, automation, fintech, and evolving global infrastructure.</p>
+                </div>
+                <div class="card">
+                  <h4>Risk-First Thinking</h4>
+                  <p>Risk management is foundational, not reactive. Interest rate sensitivity, currency exposure, and liquidity stress are assessed before returns are pursued.</p>
+                </div>
+                <div class="card">
+                  <h4>Institutional Discipline</h4>
+                  <p>Strategies are informed by experience managing multi-billion-dollar portfolios, treasury operations, and capital markets execution.</p>
+                </div>
+              </div>
+
+              <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="#journey" data-page="journey"><i class="fa-solid fa-route"></i> Client Journey</a>
+                <a class="btn" href="#engage" data-page="engage"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;" class="panel">
+            <div class="head">
+              <h3>Who This Is For</h3>
+              <p>Designed for investors seeking structure and growth</p>
+            </div>
+            <div class="body">
+              <div class="grid2">
+                <div class="card">
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Investors seeking disciplined diversification</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Professionals navigating complex market environments</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Those interested in institutional-grade portfolio thinking</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Clients focused on long-term growth with controlled risk</div></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>“A Framework, Not a Shortcut”</h4>
+                  <p>
+                    My content is intended to share strategic insight and portfolio construction philosophy.
+                    It is not about copying positions; it is about understanding how portfolios are built to adapt to a fast-changing global economy.
+                  </p>
+                  <div style="margin-top:12px;">
+                    <a class="btn ghost" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verification</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;" class="panel">
+            <div class="head">
+              <h3>Ready to explore my strategy?</h3>
+              <p>Gain insight into a disciplined, forward-looking approach to diversification designed for a technology-driven world.</p>
+            </div>
+            <div class="body">
+              <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Contact (Email / WhatsApp)</a>
+                <a class="btn" href="#home" data-page="home"><i class="fa-solid fa-house"></i> Back to Home</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: PHILOSOPHY -->
+    <div class="page" id="page-philosophy" data-page="philosophy">
+      <section id="philosophy">
+        <div class="container">
+          <div class="center">
+            <div class="sectionTitle">Philosophy</div>
+            <p class="subTitle">
+              “From Complexity to Clarity” — build portfolios that are resilient, understandable, and positioned to adapt across cycles.
+            </p>
+          </div>
+
+          <div style="margin-top:22px;" class="panel">
+            <div class="head">
+              <h3>How I think about markets</h3>
+              <p>Technology, data, and global capital flows reshape asset behavior. The framework must remain forward-looking—and disciplined.</p>
+            </div>
+            <div class="body">
+              <div class="grid3">
+                <div class="card">
+                  <h4>Clarity over noise</h4>
+                  <p>What matters is a repeatable decision framework—not constant reaction to headlines.</p>
+                </div>
+                <div class="card">
+                  <h4>Risk before return</h4>
+                  <p>Define what must not happen. Then pursue opportunity within a controlled risk range.</p>
+                </div>
+                <div class="card">
+                  <h4>Innovation-aware allocation</h4>
+                  <p>AI, automation, fintech and infrastructure shifts must be reflected in portfolio construction.</p>
+                </div>
+              </div>
+
+              <div style="margin-top:14px;" class="card">
+                <h4>The goal</h4>
+                <p>
+                  Not to chase performance. To build portfolios positioned to adapt and endure—across market cycles.
+                </p>
+              </div>
+
+              <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> Strategy</a>
+                <a class="btn" href="#journey" data-page="journey"><i class="fa-solid fa-route"></i> Client Journey</a>
+                <a class="btn ghost" href="#engage" data-page="engage"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: CLIENT JOURNEY -->
+    <div class="page" id="page-journey" data-page="journey">
+      <section id="journey">
+        <div class="container">
+          <div class="center">
+            <div class="sectionTitle">Client Journey</div>
+            <p class="subTitle">
+              A structured partnership: discovery → strategy → implementation → oversight. Clear deliverables, clear decisions.
+            </p>
+          </div>
+
+          <div style="margin-top:22px;" class="panel">
+            <div class="head">
+              <h3>How we work together</h3>
+              <p>Clarity, risk awareness, and disciplined implementation—built for real-world behavior.</p>
+            </div>
+            <div class="body">
+              <div class="grid2">
+                <div class="card">
+                  <h4>1) Discovery & Objectives</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Goals, time horizon, liquidity needs</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Constraints: tax, concentration, cash-flow</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Define risk tolerance with honesty</div></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>2) Strategy & Framework</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Allocation architecture + diversification logic</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk-first view: rates, FX, liquidity stress</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Rules for rebalancing and review cadence</div></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>3) Implementation</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Execute with discipline and transparency</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Align exposures to structural trends</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Size positions to risk budgets</div></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>4) Ongoing Oversight</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Monitoring + structured reviews</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Adjust as markets evolve—without losing discipline</div></div>
+                    <div class="b"><i class="fa-solid fa-check"></i><div>Keep communication clear and human</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Contact</a>
+                <a class="btn" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: CONTACT -->
+    <div class="page" id="page-engage" data-page="engage">
+      <section id="engage">
+        <div class="container">
+          <div class="center">
+            <div class="sectionTitle">Contact</div>
+            <p class="subTitle">
+              Ready to explore my strategy? Send a message and we’ll take it from there—clear, confidential, and structured.
+            </p>
+          </div>
+
+          <div style="margin-top:22px;" class="contactGrid">
+            <div class="panel">
+              <div class="head">
+                <h3>Direct contact</h3>
+                <p>
+                  Use email or WhatsApp. If you prefer to verify first, use the FINRA/BrokerCheck page.
+                </p>
+              </div>
+              <div class="body">
+                <div class="card">
+                  <h4>Contact channels</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-envelope"></i><div><strong>Email:</strong> <span id="contactEmailText"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d0e02031e1801190c190402032d0f181e0e050e0c1d04190c011d0c1f1903081f1e430e0200">[email&#160;protected]</a></span></div></div>
+                    <div class="b"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp:</strong> <span id="contactWhatsText">+1 212 555 8400</span></div></div>
+                  </div>
+                  <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
+                    <a class="btn primary" id="emailBtn" href="#"><i class="fa-solid fa-envelope"></i> Email Now</a>
+                    <a class="btn" id="waBtn" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                  </div>
+                </div>
+
+                <div class="card" style="margin-top:14px;">
+                  <h4>What to include</h4>
+                  <p>
+                    A short note is enough: your primary objective, time horizon, and any key constraints (liquidity, tax sensitivity, concentration).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="head">
+                <h3>Consultation request (real-time)</h3>
+                <p>
+                  This form submits in real time to <strong>/api/lead</strong> (Cloudflare Worker). You’ll get a confirmation immediately.
+                </p>
+              </div>
+              <div class="body">
+                <form id="leadForm">
+                  <div class="field">
+                    <label for="name">Full name</label>
+                    <input id="name" name="name" required placeholder="Your name" />
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required placeholder="you@email.com" />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone / WhatsApp (optional)</label>
+                    <input id="phone" name="phone" placeholder="+1..." />
+                  </div>
+                  <div class="field">
+                    <label for="type">Inquiry type</label>
+                    <select id="type" name="type" required>
+                      <option value="" disabled selected>Select</option>
+                      <option>Strategy Consultation</option>
+                      <option>Portfolio Review</option>
+                      <option>Risk & Allocation Discussion</option>
+                      <option>Institutional Strategy Inquiry</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="msg">Message</label>
+                    <textarea id="msg" name="message" placeholder="Brief overview of your objectives…"></textarea>
+                  </div>
+                  <button class="btn primary" type="submit">
+                    <i class="fa-solid fa-paper-plane"></i> Submit Request
+                  </button>
+                  <p style="margin-top:10px; color:rgba(255,255,255,.65); font-size:.95rem; line-height:1.6;">
+                    Educational and informational only — not investment advice. You’ll receive a confirmation once submitted.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;" class="panel">
+            <div class="head">
+              <h3>Disclaimer</h3>
+              <p>
+                The information provided is for educational and informational purposes only and does not constitute investment advice or a recommendation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE: FINRA VERIFICATION -->
+    <div class="page" id="page-finra" data-page="finra">
+      <section id="finra">
+        <div class="container">
+          <div class="center">
+            <div class="sectionTitle">FINRA / BrokerCheck Verification</div>
+            <p class="subTitle">
+              Verify registration and background information via FINRA BrokerCheck. This page provides a guided lookup that opens BrokerCheck directly.
+            </p>
+          </div>
+
+          <div style="margin-top:22px;" class="panel">
+            <div class="head">
+              <h3>Guided verification</h3>
+              <p>Search by person name, firm name, or CRD (if available). Links open BrokerCheck in a new tab.</p>
+            </div>
+            <div class="body">
+              <div class="grid2">
+                <div class="card">
+                  <div class="field">
+                    <label for="bcName">Person name</label>
+                    <input id="bcName" placeholder="David Busch" value="David Busch" />
+                  </div>
+                  <div class="field">
+                    <label for="bcFirm">Firm name</label>
+                    <input id="bcFirm" placeholder="Busch Capital Partners" value="Busch Capital Partners" />
+                  </div>
+                  <div class="field">
+                    <label for="bcCrd">CRD number (optional)</label>
+                    <input id="bcCrd" placeholder="Paste CRD number if you have it" />
+                  </div>
+
+                  <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                    <button class="btn primary" type="button" id="bcPersonBtn"><i class="fa-solid fa-user-check"></i> Search Person</button>
+                    <button class="btn" type="button" id="bcFirmBtn"><i class="fa-solid fa-building-columns"></i> Search Firm</button>
+                    <button class="btn ghost" type="button" id="bcCrdBtn"><i class="fa-solid fa-hashtag"></i> Search CRD</button>
+                  </div>
+
+                  <p style="margin-top:10px; color:rgba(255,255,255,.66);">
+                    Direct access: <a style="color: var(--gold); font-weight:900;" href="https://brokercheck.finra.org/" target="_blank" rel="noopener">brokercheck.finra.org</a>
+                  </p>
+                </div>
+
+                <div class="card">
+                  <h4>What to look for</h4>
+                  <div class="bullets">
+                    <div class="b"><i class="fa-solid fa-id-card"></i><div><strong>CRD number:</strong> confirm you’re viewing the correct profile.</div></div>
+                    <div class="b"><i class="fa-solid fa-clipboard-check"></i><div><strong>Registrations:</strong> current and historical affiliations.</div></div>
+                    <div class="b"><i class="fa-solid fa-triangle-exclamation"></i><div><strong>Disclosures:</strong> if any exist, read details carefully.</div></div>
+                  </div>
+
+                  <div style="margin-top:12px;" class="b">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div>
+                      This page provides convenience links only. The authoritative source is FINRA BrokerCheck.
+                    </div>
+                  </div>
+
+                  <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
+                    <a class="btn primary" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Ask a Question</a>
+                    <a class="btn" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> Strategy</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="margin-top:14px;">
+                <h4>Note on content</h4>
+                <p>
+                  My content is intended for educational and informational purposes only. It is a framework for understanding portfolio construction
+                  and strategic thinking—not a recommendation or individualized investment advice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div class="footGrid">
+        <div>
+          <div class="footTitle">Busch Capital Partners</div>
+          <p>
+            Strategy-led wealth management designed for evolving markets—discipline, adaptability, and clarity.
+          </p>
+          <p style="color:rgba(255,255,255,.68); margin-top:10px;">
+            Domain: <strong>buschcapitalpartners.com</strong>
+          </p>
+        </div>
+
+        <div class="footLinks">
+          <h4>Navigation</h4>
+          <a href="#home" data-page="home">Home</a>
+          <a href="#founder" data-page="founder">Founder</a>
+          <a href="#approach" data-page="approach">Strategy</a>
+          <a href="#journey" data-page="journey">Client Journey</a>
+          <a href="#finra" data-page="finra">FINRA Verification</a>
+        </div>
+
+        <div class="footLinks">
+          <h4>Contact</h4>
+          <a href="#engage" data-page="engage">Email / WhatsApp</a>
+          <a href="#finra" data-page="finra">Verify (BrokerCheck)</a>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <p><strong>Disclaimer:</strong> The information provided is for educational and informational purposes only and does not constitute investment advice or a recommendation. Past performance is not indicative of future results. Always consider your personal financial circumstances and consult a qualified professional before making investment decisions.</p>
+        <p style="margin-top:14px;">© 2026 Busch Capital Partners. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <div class="tHead"><i class="fa-solid fa-circle-check"></i> <span id="toastTitle">Success</span></div>
+    <p id="toastMsg">Done.</p>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    /**
+     * REAL-TIME FEATURES REQUIRE THE CLOUDFLARE WORKER:
+     * - GET /api/quotes  -> live ticker prices
+     * - GET /api/news    -> live insights with image previews
+     * - POST /api/lead   -> real-time form submission
+     */
+
+    // ========= Config =========
+    const CONTACT_EMAIL = "consultation@buschcapitalpartners.com";
+    const WHATSAPP_NUMBER = "+1 212 555 8400"; // change to your real WhatsApp
+    const WHATSAPP_LINK = "https://wa.me/12125558400"; // update as needed
+
+    // Market symbols for the ticker (Worker maps these to correct sources)
+    const TICKER_SYMBOLS = [
+      "BLOK","BLCN","LEGR",
+      "IBIT","FBTC","GBTC",
+      "SPY","QQQ","IWM","VTI",
+      "GOLD_SPOT","GLD","IAU","GDX",
+      "TLT","IEF","UUP",
+      "BTC-USD","ETH-USD"
+    ];
+
+    // ========= SPA routing =========
+    const pages = Array.from(document.querySelectorAll(".page"));
+    const navItems = Array.from(document.querySelectorAll("[data-page]"));
+    const navLinks = document.getElementById("navLinks");
+    const header = document.getElementById("header");
+    const mobileBtn = document.getElementById("mobileBtn");
+
+    function setActiveNav(pageName){
+      document.querySelectorAll(".navlinks a").forEach(a => a.classList.remove("active"));
+      document.querySelectorAll(`.navlinks a[data-page="${pageName}"]`).forEach(a => a.classList.add("active"));
+    }
+
+    function closeMobileMenu(){
+      navLinks.classList.remove("active");
+      if(mobileBtn){
+        mobileBtn.setAttribute("aria-expanded","false");
+        mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    }
+
+    function showPage(pageName, scrollTop = true){
+      pages.forEach(p => p.classList.remove("active"));
+      const page = document.querySelector(`.page[data-page="${pageName}"]`);
+      if(page) page.classList.add("active");
+      setActiveNav(pageName);
+      closeMobileMenu();
+
+      const map = { home:"#home", founder:"#founder", approach:"#approach", philosophy:"#philosophy", journey:"#journey", engage:"#engage", finra:"#finra" };
+      const hash = map[pageName] || "#home";
+      if(location.hash !== hash) history.pushState({page: pageName}, "", hash);
+
+      if(scrollTop) window.scrollTo({top:0, behavior:"smooth"});
+    }
+
+    function routeFromHash(){
+      const h = (location.hash || "#home").toLowerCase();
+      const map = { "#home":"home", "#founder":"founder", "#approach":"approach", "#philosophy":"philosophy", "#journey":"journey", "#engage":"engage", "#finra":"finra" };
+      const pageName = map[h] || "home";
+      pages.forEach(p => p.classList.remove("active"));
+      const page = document.querySelector(`.page[data-page="${pageName}"]`);
+      if(page) page.classList.add("active");
+      setActiveNav(pageName);
+      closeMobileMenu();
+    }
+
+    navItems.forEach(el=>{
+      el.addEventListener("click", (e)=>{
+        const pageName = el.getAttribute("data-page");
+        if(!pageName) return;
+        e.preventDefault();
+        showPage(pageName);
+      });
+    });
+    window.addEventListener("popstate", routeFromHash);
+    routeFromHash();
+
+    // Header scroll effect
+    window.addEventListener("scroll", ()=>{
+      if(window.scrollY > 120) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    });
+
+    // Mobile nav
+    if(mobileBtn){
+      mobileBtn.addEventListener("click", ()=>{
+        const open = navLinks.classList.toggle("active");
+        mobileBtn.setAttribute("aria-expanded", String(open));
+        mobileBtn.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+      });
+    }
+    window.addEventListener("resize", ()=>{
+      if(window.innerWidth > 980) closeMobileMenu();
+    });
+
+    // ========= Toast =========
+    const toast = document.getElementById("toast");
+    const toastTitle = document.getElementById("toastTitle");
+    const toastMsg = document.getElementById("toastMsg");
+    let toastTimer = null;
+
+    function showToast(title, msg){
+      toastTitle.textContent = title;
+      toastMsg.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(()=>toast.classList.remove("show"), 4200);
+    }
+
+    // ========= Contact buttons =========
+    document.getElementById("contactEmailText").textContent = CONTACT_EMAIL;
+    document.getElementById("contactWhatsText").textContent = WHATSAPP_NUMBER;
+
+    const emailBtn = document.getElementById("emailBtn");
+    const waBtn = document.getElementById("waBtn");
+    emailBtn.href = `mailto:${encodeURIComponent(CONTACT_EMAIL)}?subject=${encodeURIComponent("Consultation Request — Busch Capital Partners")}&body=${encodeURIComponent("Hello David,\n\nI’d like to explore your strategy framework. My primary objective is...\n\nBest,\n")}`;
+    waBtn.href = WHATSAPP_LINK;
+
+    // ========= Real-time: Live Quotes / Ticker =========
+    const tickRow = document.getElementById("tickRow");
+    const tickMeta = document.getElementById("tickMeta");
+    const statA = document.getElementById("statA");
+    const statC = document.getElementById("statC");
+
+    function fmtPrice(x){
+      if(x === null || x === undefined || Number.isNaN(x)) return "—";
+      const n = Number(x);
+      if(Math.abs(n) >= 1000) return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+      if(Math.abs(n) >= 10) return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+      return n.toLocaleString(undefined, {maximumFractionDigits: 4});
+    }
+    function fmtChg(pct){
+      if(pct === null || pct === undefined || Number.isNaN(pct)) return {cls:"flat", text:"0.00%"};
+      const n = Number(pct);
+      const cls = n > 0 ? "up" : (n < 0 ? "dn" : "flat");
+      const sign = n > 0 ? "+" : "";
+      return {cls, text: `${sign}${n.toFixed(2)}%`};
+    }
+
+    function buildTickerItems(quotes){
+      const items = quotes.map(q=>{
+        const ch = fmtChg(q.changePct);
+        return `
+          <span class="tick-item" title="${(q.source||"").toString()}">
+            <strong>${q.label || q.symbol}</strong>
+            <span class="px">${fmtPrice(q.price)}</span>
+            <span class="ch ${ch.cls}">${ch.text}</span>
+          </span>
+        `;
+      }).join("");
+
+      tickRow.innerHTML = items + items;
+    }
+
+    async function fetchQuotes(){
+      const url = `/api/quotes?symbols=${encodeURIComponent(TICKER_SYMBOLS.join(","))}`;
+      const r = await fetch(url, {cache:"no-store"});
+      if(!r.ok) throw new Error("quotes_error");
+      return r.json();
+    }
+
+    async function refreshTicker(){
+      try{
+        const data = await fetchQuotes();
+        if(Array.isArray(data?.quotes)){
+          buildTickerItems(data.quotes);
+          const now = new Date();
+          tickMeta.textContent = `Updated ${now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}`;
+          statA.textContent = String(data.quotes.length);
+        }else{
+          tickMeta.textContent = "Live feed unavailable";
+        }
+      }catch(e){
+        tickMeta.textContent = "Live feed unavailable (check Worker)";
+      }
+    }
+
+    // ========= Real-time: Live Insights (with image previews) =========
+    const insightsRow = document.getElementById("insightsRow");
+    const insMeta = document.getElementById("insMeta");
+
+    function safeHost(u){
+      try{ return new URL(u).hostname.replace("www.",""); }catch(e){ return "source"; }
+    }
+
+    function renderInsights(items){
+      const slice = (items || []).slice(0, 4);
+      insightsRow.innerHTML = slice.map(it=>{
+        const img = it.image || "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=70";
+        const src = safeHost(it.link || "");
+        const time = it.published ? new Date(it.published).toLocaleString([], {month:"short", day:"2-digit"}) : "Today";
+        return `
+          <a class="insightCard" href="${it.link}" target="_blank" rel="noopener noreferrer" title="${it.title}">
+            <div class="insImg">
+              <img src="${img}" alt="" loading="lazy" referrerpolicy="no-referrer" />
+            </div>
+            <div class="insBody">
+              <div class="insTitle">${it.title || "Market update"}</div>
+              <div class="insMeta">
+                <span>${src}</span>
+                <span>${time}</span>
+              </div>
+            </div>
+          </a>
+        `;
+      }).join("");
+
+      statC.textContent = String(slice.length);
+    }
+
+    async function fetchNews(){
+      const r = await fetch(`/api/news?limit=8`, {cache:"no-store"});
+      if(!r.ok) throw new Error("news_error");
+      return r.json();
+    }
+
+    async function refreshInsights(){
+      try{
+        const data = await fetchNews();
+        if(Array.isArray(data?.items)){
+          renderInsights(data.items);
+          const now = new Date();
+          insMeta.textContent = `Updated ${now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}`;
+        }else{
+          insMeta.textContent = "Insights unavailable";
+        }
+      }catch(e){
+        insMeta.textContent = "Insights unavailable (check Worker)";
+      }
+    }
+
+    // ========= Real-time: Lead Form =========
+    const leadForm = document.getElementById("leadForm");
+    leadForm.addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      const btn = leadForm.querySelector('button[type="submit"]');
+      const original = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+      const payload = {
+        name: leadForm.name.value.trim(),
+        email: leadForm.email.value.trim(),
+        phone: leadForm.phone.value.trim(),
+        type: leadForm.type.value,
+        message: leadForm.message.value.trim(),
+        source: "buschcapitalpartners.com"
+      };
+
+      try{
+        const r = await fetch("/api/lead", {
+          method:"POST",
+          headers:{ "Content-Type":"application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await r.json().catch(()=>({}));
+        if(!r.ok) throw new Error(data?.error || "submit_failed");
+        showToast("Request received", "Thank you — your message was submitted successfully. We’ll respond as soon as possible.");
+        leadForm.reset();
+      }catch(err){
+        showToast("Couldn’t submit", "Please try again in a moment, or use Email/WhatsApp above.");
+      }finally{
+        btn.disabled = false;
+        btn.innerHTML = original;
+      }
+    });
+
+    // ========= FINRA / BrokerCheck =========
+    function openNew(url){ window.open(url, "_blank", "noopener,noreferrer"); }
+    document.getElementById("bcPersonBtn").addEventListener("click", ()=>{
+      const name = document.getElementById("bcName").value.trim();
+      if(!name) return showToast("Missing input", "Enter a person name.");
+      openNew(`https://brokercheck.finra.org/search/genericsearch/individualgrid?query=${encodeURIComponent(name)}`);
+    });
+    document.getElementById("bcFirmBtn").addEventListener("click", ()=>{
+      const firm = document.getElementById("bcFirm").value.trim();
+      if(!firm) return showToast("Missing input", "Enter a firm name.");
+      openNew(`https://brokercheck.finra.org/search/genericsearch/firmgrid?query=${encodeURIComponent(firm)}`);
+    });
+    document.getElementById("bcCrdBtn").addEventListener("click", ()=>{
+      const crd = document.getElementById("bcCrd").value.trim();
+      if(!crd) return showToast("Missing input", "Paste a CRD number (optional field).");
+      openNew(`https://brokercheck.finra.org/search/genericsearch/individualgrid?query=${encodeURIComponent(crd)}`);
+    });
+
+    // ========= Boot =========
+    (async ()=>{
+      await refreshTicker();
+      await refreshInsights();
+      setInterval(refreshTicker, 30_000);
+      setInterval(refreshInsights, 120_000);
+    })();
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"bf4bcab0186a470aa850a48c561dd9d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
