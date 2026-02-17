@@ -325,7 +325,6 @@
         linear-gradient(170deg, rgba(8,12,20,.6) 0%, rgba(13,21,37,.3) 100%);
       pointer-events:none; z-index:0;
     }
-    /* Vertical rule accents */
     .hero::after {
       content:'';
       position:absolute; left:0; top:0; bottom:0; width:3px;
@@ -414,7 +413,6 @@
       font-style:italic;
     }
 
-    /* Hero right panel */
     .hero-panel {
       border:1px solid var(--stroke);
       background:rgba(8,12,20,.55);
@@ -571,9 +569,7 @@
       display:grid; grid-template-columns:1fr 1.4fr;
       gap:60px; align-items:start;
     }
-    .founder-portrait {
-      position:relative;
-    }
+    .founder-portrait { position:relative; }
     .founder-portrait-inner {
       width:100%;
       aspect-ratio:3/4;
@@ -732,7 +728,6 @@
       border-right:1px solid rgba(212,175,55,.3);
     }
 
-    /* Asset Class exposure */
     .asset-table {
       width:100%; border-collapse:collapse;
       border:1px solid var(--stroke);
@@ -1345,7 +1340,6 @@
             </div>
           </div>
 
-          <!-- Asset Table -->
           <div style="margin-top:60px;">
             <div class="sec-badge" style="margin-bottom:24px;"><i class="fa-solid fa-table" style="font-size:.75rem;"></i> Asset Class Orientation</div>
             <table class="asset-table">
@@ -1869,24 +1863,37 @@
       { tag:"Commodities", title:"Gold approaches cycle highs as geopolitical uncertainty and dollar pressure combine", date:"Feb 2026", source:"World Gold Council" },
     ];
 
-    // ─── SPA Routing ────────────────────────────────────
+    // ─── SPA Routing (FIXED) ─────────────────────────────
     const pages = Array.from(document.querySelectorAll('.page'));
     const navLinks = document.getElementById('navLinks');
     const header = document.getElementById('header');
 
-    function showPage(name) {
+    function showPage(name, opts = { push: true }) {
+      // fallback if page doesn't exist
+      if (!document.querySelector(`.page[data-page="${name}"]`)) name = 'home';
+
+      // show page
       pages.forEach(p => p.classList.remove('active'));
       const pg = document.querySelector(`.page[data-page="${name}"]`);
-      if (pg) pg.classList.add('active');
-      document.querySelectorAll('[data-page]').forEach(el => {
-        el.classList.toggle('active', el.tagName === 'A' && el.closest('.navlinks') && el.getAttribute('data-page') === name);
+      pg.classList.add('active');
+
+      // set active only on nav/footer anchors (do NOT touch .page containers)
+      document.querySelectorAll('.navlinks a[data-page], footer a[data-page]').forEach(a => {
+        a.classList.toggle('active', a.dataset.page === name);
       });
+
+      // close mobile menu
       navLinks.classList.remove('mobile-open');
+
+      // scroll top
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      history.pushState({ page: name }, '', '#' + name);
+
+      // update hash
+      if (opts.push) history.pushState({ page: name }, '', '#' + name);
     }
 
-    document.querySelectorAll('[data-page]').forEach(el => {
+    // bind clicks to elements with data-page EXCEPT the page containers themselves
+    document.querySelectorAll('[data-page]:not(.page)').forEach(el => {
       el.addEventListener('click', e => {
         const name = el.getAttribute('data-page');
         if (!name) return;
@@ -1897,7 +1904,7 @@
 
     window.addEventListener('popstate', () => {
       const hash = (location.hash || '#home').slice(1);
-      showPage(hash || 'home');
+      showPage(hash || 'home', { push: false });
     });
 
     window.addEventListener('scroll', () => {
@@ -1916,8 +1923,10 @@
       const all = [...SYMBOLS, ...SYMBOLS];
       all.forEach(s => {
         const up = s.chg >= 0;
-        const v = s.price >= 1000 ? s.price.toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2}) : s.price.toFixed(2);
-        const ch = (up?'+':'')+s.chg.toFixed(2)+'%';
+        const v = s.price >= 1000
+          ? s.price.toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2})
+          : s.price.toFixed(2);
+        const ch = (up?'+':'') + s.chg.toFixed(2) + '%';
         html += `<span class="tick-item"><span class="tick-sym">${s.sym}</span><span class="tick-px">${v}</span><span class="tick-ch ${up?'up':'dn'}">${ch}</span></span>`;
       });
       row.innerHTML = html;
@@ -2013,9 +2022,9 @@
     setInterval(buildTicker, 30000);
     setInterval(buildMarkets, 60000);
 
-    // Route from hash on load
+    // Route from hash on load (do NOT push a new history entry)
     const initHash = (location.hash || '#home').slice(1);
-    showPage(initHash || 'home');
+    showPage(initHash || 'home', { push: false });
   </script>
 </body>
 </html>
