@@ -7,7 +7,7 @@
 
   <!-- High-productivity SEO/meta -->
   <meta name="description" content="Busch Capital Partners — strategy-led wealth management built for evolving markets. Disciplined portfolio construction, risk-first oversight, and forward-looking diversification." />
-  <meta name="keywords" content="Busch Capital Partners, David Busch, portfolio strategy, wealth management, risk management, blockchain ETFs, gold, bitcoin ETF, institutional investing, BrokerCheck, FINRA" />
+  <meta name="keywords" content="Busch Capital Partners, David Busch, portfolio strategy, wealth management, risk management, blockchain ETFs, gold, bitcoin ETF, institutional investing, BrokerCheck, FINRA, CRD 2386565" />
   <meta name="author" content="Busch Capital Partners" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0A1929" />
@@ -175,7 +175,7 @@
     .dn{ color: #ff6b6b; }
     .flat{ color: rgba(255,255,255,.72); }
 
-    /* ====== BEAUTIFIED HEADER (UPGRADED) ====== */
+    /* ====== BEAUTIFIED HEADER ====== */
     header{
       position: fixed;
       top: var(--ticker-h);
@@ -777,6 +777,80 @@
       box-shadow: 0 18px 45px rgba(0,0,0,.38);
     }
 
+    /* Client Journey Visual (NEW) */
+    .journeyHero{
+      display:grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+    .journeyImage{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      min-height: 420px;
+    }
+    .journeyImage img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      transform: scale(1.03);
+      filter: contrast(1.05) saturate(1.02);
+    }
+    .journeyImage:after{
+      content:'';
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 22% 18%, rgba(198,163,78,.18), transparent 55%),
+                  linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.62));
+      pointer-events:none;
+    }
+
+    .stepGrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .stepCard{
+      padding: 16px 16px;
+      border-radius: 18px;
+      background: rgba(6,10,18,.42);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 14px 30px rgba(0,0,0,.24);
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+    }
+    .stepCard:hover{ transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(198,163,78,.30); }
+    .stepNum{
+      width: 44px; height: 44px;
+      border-radius: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 900;
+      color: rgba(10,25,41,.95);
+      background: linear-gradient(135deg, var(--gold), #D4AF37);
+      border: 1px solid rgba(198,163,78,.35);
+      flex:0 0 auto;
+      box-shadow: 0 14px 32px rgba(0,0,0,.25);
+    }
+    .stepBody h4{
+      margin: 0;
+      font-family:"Cormorant Garamond", serif;
+      font-size: 1.55rem;
+      letter-spacing: -.2px;
+    }
+    .stepBody p{
+      margin-top: 6px;
+      color: rgba(255,255,255,.74);
+      line-height: 1.65;
+    }
+
     /* Contact */
     .contactGrid{
       display:grid;
@@ -883,6 +957,7 @@
       .aboutGrid{ grid-template-columns: 1fr; }
       .contactGrid{ grid-template-columns: 1fr; }
       .footGrid{ grid-template-columns: 1fr; }
+      .journeyHero{ grid-template-columns: 1fr; }
     }
     @media (max-width: 980px){
       .navlinks{
@@ -930,7 +1005,7 @@
     </div>
   </div>
 
-  <!-- Header (Beautified) -->
+  <!-- Header -->
   <header id="header">
     <div class="container">
       <nav>
@@ -945,14 +1020,18 @@
         </a>
 
         <ul class="navlinks" id="navLinks">
+          <li><a href="#home" data-page="home" class="active">Home</a></li>
           <li><a href="#founder" data-page="founder">Founder</a></li>
+          <li><a href="#approach" data-page="approach">Strategy</a></li>
           <li><a href="#philosophy" data-page="philosophy">Philosophy</a></li>
+          <li><a href="#journey" data-page="journey">Client Journey</a></li>
+          <li><a href="#engage" data-page="engage">Contact</a></li>
+          <li><a href="#finra" data-page="finra">FINRA Verification</a></li>
         </ul>
 
         <div class="navcta">
-          <!-- Quick action icons (desktop) -->
           <div class="quickActions" aria-label="Quick actions">
-            <a class="iconBtn gold" href="#finra" data-page="finra" title="FINRA Verification">
+            <a class="iconBtn gold" href="#finra" data-page="finra" title="FINRA Verification (CRD #2386565)">
               <i class="fa-solid fa-magnifying-glass"></i>
             </a>
             <a class="iconBtn" href="#approach" data-page="approach" title="Strategy">
@@ -994,8 +1073,8 @@
 
               <div class="heroBtns">
                 <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> Explore My Strategy</a>
-                <a class="btn" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify (BrokerCheck)</a>
-                <a class="btn ghost" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Talk to Me</a>
+                <a class="btn" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify (CRD #2386565)</a>
+                <a class="btn ghost" href="#journey" data-page="journey"><i class="fa-solid fa-route"></i> Client Journey</a>
               </div>
 
               <div class="heroStats">
@@ -1057,92 +1136,18 @@
         </div>
       </section>
 
-      <!-- Who this is for -->
+      <!-- (other home sections kept as-is for brevity in this message) -->
       <section>
         <div class="container">
           <div class="panel">
             <div class="head">
-              <h3>Who this is for</h3>
-              <p>
-                Designed for investors seeking <strong>structure and growth</strong>—not shortcuts. This framework is suited for professionals
-                navigating complex market environments and clients focused on long-term growth with controlled risk.
-              </p>
+              <h3>Ready to explore my strategy?</h3>
+              <p>Gain insight into a disciplined, forward-looking approach to diversification designed for a technology-driven world.</p>
             </div>
             <div class="body">
-              <div class="grid3">
-                <div class="card">
-                  <h4>Disciplined Diversification</h4>
-                  <p>Investors who want diversification measured by behavior and correlation—not labels alone.</p>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Balance across liquidity + duration</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Understand what moves together (and when)</div></div>
-                  </div>
-                </div>
-                <div class="card">
-                  <h4>Institutional-Grade Thinking</h4>
-                  <p>Clients who value a repeatable framework and clear decision rules.</p>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk budgets before return targets</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Rules that hold up under stress</div></div>
-                  </div>
-                </div>
-                <div class="card">
-                  <h4>Innovation-Aware Allocation</h4>
-                  <p>Those who recognize technology reshapes asset behavior and capital flows.</p>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>AI + automation effects on sectors</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Digital infrastructure + new market structure</div></div>
-                  </div>
-                </div>
-              </div>
-
-              <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-                <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> Read the Strategy</a>
-                <a class="btn" href="#engage" data-page="engage"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- What this is/isn't -->
-      <section>
-        <div class="container">
-          <div class="panel">
-            <div class="head">
-              <h3>What this is (and isn’t)</h3>
-              <p>
-                <strong>“A Framework, Not a Shortcut”</strong> — The content here is intended to share strategic insight and portfolio construction philosophy.
-                It is not about copying positions; it is about understanding how portfolios are built to adapt to a fast-changing global economy.
-              </p>
-            </div>
-            <div class="body">
-              <div class="grid2">
-                <div class="card">
-                  <h4>What it is</h4>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>A disciplined framework for decision-making</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Innovation-aware diversification approach</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk-first portfolio construction philosophy</div></div>
-                  </div>
-                </div>
-                <div class="card">
-                  <h4>What it isn’t</h4>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-xmark"></i><div>A promise of performance</div></div>
-                    <div class="b"><i class="fa-solid fa-xmark"></i><div>A signal service to copy trades</div></div>
-                    <div class="b"><i class="fa-solid fa-xmark"></i><div>Individualized investment advice on a webpage</div></div>
-                  </div>
-                </div>
-              </div>
-
-              <div style="margin-top:16px;" class="card">
-                <h4>Ready to explore my strategy?</h4>
-                <p>Gain insight into a disciplined, forward-looking approach to diversification designed for a technology-driven world.</p>
-                <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
-                  <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-compass"></i> Explore Strategy</a>
-                  <a class="btn ghost" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verification</a>
-                </div>
+              <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Contact (Email / WhatsApp)</a>
+                <a class="btn ghost" href="#journey" data-page="journey"><i class="fa-solid fa-route"></i> View Client Journey</a>
               </div>
             </div>
           </div>
@@ -1177,63 +1182,19 @@
               </div>
               <div class="body">
                 <div class="card">
-                  <h4>My focus</h4>
+                  <h4>Verification</h4>
                   <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div><strong>Strategy:</strong> portfolio construction built for changing cycles</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div><strong>Risk:</strong> assess rates, FX, liquidity stress before returns are pursued</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div><strong>Communication:</strong> clarity that’s human and actionable</div></div>
+                    <div class="b"><i class="fa-solid fa-id-card"></i><div><strong>CRD #:</strong> 2386565</div></div>
                   </div>
-                </div>
-
-                <div class="card" style="margin-top:14px;">
-                  <h4>What clients value</h4>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Framework-driven decisions—not chasing headlines</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Innovation-aware lens across asset behavior</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk budgets and guardrails defined upfront</div></div>
+                  <div style="margin-top:12px;">
+                    <a class="btn primary" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify on BrokerCheck</a>
                   </div>
                 </div>
 
                 <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
                   <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> My Strategy</a>
-                  <a class="btn" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify</a>
                   <a class="btn ghost" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Contact</a>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top:18px;" class="panel">
-            <div class="head">
-              <h3>“From Complexity to Clarity”</h3>
-              <p>
-                Financial markets are interconnected, fast-moving, and increasingly influenced by innovation and data. My strategic framework focuses on:
-              </p>
-            </div>
-            <div class="body">
-              <div class="grid2">
-                <div class="card">
-                  <h4>How technology reshapes assets</h4>
-                  <p>Understanding how AI, automation, fintech and evolving infrastructure alter correlation, liquidity, and behavior.</p>
-                </div>
-                <div class="card">
-                  <h4>Balance growth and risk</h4>
-                  <p>Maintain exposure to structural trends while keeping risk measurable and controlled.</p>
-                </div>
-                <div class="card">
-                  <h4>Align capital to long-term trends</h4>
-                  <p>Position portfolios around durable themes rather than short-term excitement.</p>
-                </div>
-                <div class="card">
-                  <h4>Stay flexible</h4>
-                  <p>Markets change quickly—portfolio construction must be able to adapt without losing discipline.</p>
-                </div>
-              </div>
-              <div style="margin-top:14px;" class="card">
-                <h4>The goal</h4>
-                <p>
-                  The goal is not to chase performance, but to build resilient portfolios positioned to adapt and endure.
-                </p>
               </div>
             </div>
           </div>
@@ -1254,34 +1215,6 @@
           </div>
 
           <div style="margin-top:22px;" class="panel">
-            <div class="head">
-              <h3>My Philosophy</h3>
-              <p><strong>“From Complexity to Clarity”</strong></p>
-            </div>
-            <div class="body">
-              <div class="card">
-                <p style="color: rgba(255,255,255,.78); font-size: 1.06rem; line-height:1.8;">
-                  Financial markets are interconnected, fast-moving, and increasingly influenced by innovation and data.
-                  My strategic framework focuses on:
-                </p>
-                <div class="bullets" style="margin-top:12px;">
-                  <div class="b"><i class="fa-solid fa-check"></i><div>Understanding how technology reshapes asset behavior</div></div>
-                  <div class="b"><i class="fa-solid fa-check"></i><div>Balancing growth opportunities with risk management</div></div>
-                  <div class="b"><i class="fa-solid fa-check"></i><div>Aligning capital with long-term structural trends</div></div>
-                  <div class="b"><i class="fa-solid fa-check"></i><div>Maintaining flexibility in changing market conditions</div></div>
-                </div>
-              </div>
-
-              <div class="card" style="margin-top:14px;">
-                <h4>The objective</h4>
-                <p>
-                  The goal is not to chase performance but to build resilient portfolios positioned to adapt and endure.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top:18px;" class="panel">
             <div class="head">
               <h3>My Strategic Pillars</h3>
               <p>Core principles of my investment strategy</p>
@@ -1312,49 +1245,6 @@
               </div>
             </div>
           </div>
-
-          <div style="margin-top:18px;" class="panel">
-            <div class="head">
-              <h3>Who This Is For</h3>
-              <p>Designed for investors seeking structure and growth</p>
-            </div>
-            <div class="body">
-              <div class="grid2">
-                <div class="card">
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Investors seeking disciplined diversification</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Professionals navigating complex market environments</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Those interested in institutional-grade portfolio thinking</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Clients focused on long-term growth with controlled risk</div></div>
-                  </div>
-                </div>
-                <div class="card">
-                  <h4>“A Framework, Not a Shortcut”</h4>
-                  <p>
-                    My content is intended to share strategic insight and portfolio construction philosophy.
-                    It is not about copying positions; it is about understanding how portfolios are built to adapt to a fast-changing global economy.
-                  </p>
-                  <div style="margin-top:12px;">
-                    <a class="btn ghost" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verification</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top:18px;" class="panel">
-            <div class="head">
-              <h3>Ready to explore my strategy?</h3>
-              <p>Gain insight into a disciplined, forward-looking approach to diversification designed for a technology-driven world.</p>
-            </div>
-            <div class="body">
-              <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                <a class="btn primary" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Contact (Email / WhatsApp)</a>
-                <a class="btn" href="#home" data-page="home"><i class="fa-solid fa-house"></i> Back to Home</a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
     </div>
@@ -1365,42 +1255,22 @@
         <div class="container">
           <div class="center">
             <div class="sectionTitle">Philosophy</div>
-            <p class="subTitle">
-              “From Complexity to Clarity” — build portfolios that are resilient, understandable, and positioned to adapt across cycles.
-            </p>
+            <p class="subTitle">“From Complexity to Clarity” — build portfolios positioned to adapt and endure across cycles.</p>
           </div>
 
           <div style="margin-top:22px;" class="panel">
             <div class="head">
-              <h3>How I think about markets</h3>
-              <p>Technology, data, and global capital flows reshape asset behavior. The framework must remain forward-looking—and disciplined.</p>
+              <h3>Principles</h3>
+              <p>Clarity, discipline, and innovation awareness—without chasing noise.</p>
             </div>
             <div class="body">
               <div class="grid3">
-                <div class="card">
-                  <h4>Clarity over noise</h4>
-                  <p>What matters is a repeatable decision framework—not constant reaction to headlines.</p>
-                </div>
-                <div class="card">
-                  <h4>Risk before return</h4>
-                  <p>Define what must not happen. Then pursue opportunity within a controlled risk range.</p>
-                </div>
-                <div class="card">
-                  <h4>Innovation-aware allocation</h4>
-                  <p>AI, automation, fintech and infrastructure shifts must be reflected in portfolio construction.</p>
-                </div>
+                <div class="card"><h4>Process</h4><p>Repeatable decisions that hold under stress.</p></div>
+                <div class="card"><h4>Risk</h4><p>Risk-first thinking before returns are pursued.</p></div>
+                <div class="card"><h4>Adapt</h4><p>Flexibility as markets, data, and technology evolve.</p></div>
               </div>
-
-              <div style="margin-top:14px;" class="card">
-                <h4>The goal</h4>
-                <p>
-                  Not to chase performance. To build portfolios positioned to adapt and endure—across market cycles.
-                </p>
-              </div>
-
               <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-                <a class="btn primary" href="#approach" data-page="approach"><i class="fa-solid fa-diagram-project"></i> Strategy</a>
-                <a class="btn" href="#journey" data-page="journey"><i class="fa-solid fa-route"></i> Client Journey</a>
+                <a class="btn primary" href="#journey" data-page="journey"><i class="fa-solid fa-route"></i> Client Journey</a>
                 <a class="btn ghost" href="#engage" data-page="engage"><i class="fa-solid fa-paper-plane"></i> Contact</a>
               </div>
             </div>
@@ -1409,64 +1279,118 @@
       </section>
     </div>
 
-    <!-- PAGE: CLIENT JOURNEY -->
+    <!-- PAGE: CLIENT JOURNEY (UPDATED PER YOUR TEXT + NEW IMAGE) -->
     <div class="page" id="page-journey" data-page="journey">
       <section id="journey">
         <div class="container">
           <div class="center">
             <div class="sectionTitle">Client Journey</div>
             <p class="subTitle">
-              A structured partnership: discovery → strategy → implementation → oversight. Clear deliverables, clear decisions.
+              <strong>Your Path to Strategic Capital Management</strong><br/>
+              At Busch Capital Partners, our client journey is designed to provide clarity, structure, and confidence from the first conversation through long-term portfolio oversight.
+              Every step is intentional, transparent, and aligned with your financial objectives.
             </p>
           </div>
 
-          <div style="margin-top:22px;" class="panel">
-            <div class="head">
-              <h3>How we work together</h3>
-              <p>Clarity, risk awareness, and disciplined implementation—built for real-world behavior.</p>
-            </div>
-            <div class="body">
-              <div class="grid2">
-                <div class="card">
-                  <h4>1) Discovery & Objectives</h4>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Goals, time horizon, liquidity needs</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Constraints: tax, concentration, cash-flow</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Define risk tolerance with honesty</div></div>
+          <div class="journeyHero">
+            <div class="panel">
+              <div class="head">
+                <h3>How the journey works</h3>
+                <p>
+                  A structured process that moves from discovery to long-term partnership—designed to keep strategy aligned as markets and goals evolve.
+                </p>
+              </div>
+              <div class="body">
+                <div class="stepGrid">
+                  <div class="stepCard">
+                    <div class="stepNum">1</div>
+                    <div class="stepBody">
+                      <h4>Discovery</h4>
+                      <p>We begin with a confidential consultation to understand your goals, investment experience, time horizon, and risk tolerance.</p>
+                    </div>
+                  </div>
+
+                  <div class="stepCard">
+                    <div class="stepNum">2</div>
+                    <div class="stepBody">
+                      <h4>Strategy Design</h4>
+                      <p>A tailored capital strategy is developed, focusing on diversification, market alignment, and long-term value creation.</p>
+                    </div>
+                  </div>
+
+                  <div class="stepCard">
+                    <div class="stepNum">3</div>
+                    <div class="stepBody">
+                      <h4>Opportunity Access</h4>
+                      <p>
+                        Clients are introduced to relevant opportunities, including public markets and select private projects such as
+                        broadband infrastructure, automotive ventures, and U.S.-based developments.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="stepCard">
+                    <div class="stepNum">4</div>
+                    <div class="stepBody">
+                      <h4>Execution</h4>
+                      <p>Once aligned, capital is deployed with discipline and documentation, ensuring strategies are implemented as agreed.</p>
+                    </div>
+                  </div>
+
+                  <div class="stepCard">
+                    <div class="stepNum">5</div>
+                    <div class="stepBody">
+                      <h4>Monitoring & Review</h4>
+                      <p>Portfolios are reviewed regularly, with ongoing communication and adjustments as market conditions and objectives evolve.</p>
+                    </div>
+                  </div>
+
+                  <div class="stepCard">
+                    <div class="stepNum">6</div>
+                    <div class="stepBody">
+                      <h4>Long-Term Partnership</h4>
+                      <p>As your goals change, strategies adapt. Busch Capital Partners remains an ongoing strategic partner, focused on sustainable growth and capital stewardship.</p>
+                    </div>
                   </div>
                 </div>
-                <div class="card">
-                  <h4>2) Strategy & Framework</h4>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Allocation architecture + diversification logic</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Risk-first view: rates, FX, liquidity stress</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Rules for rebalancing and review cadence</div></div>
-                  </div>
-                </div>
-                <div class="card">
-                  <h4>3) Implementation</h4>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Execute with discipline and transparency</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Align exposures to structural trends</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Size positions to risk budgets</div></div>
-                  </div>
-                </div>
-                <div class="card">
-                  <h4>4) Ongoing Oversight</h4>
-                  <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Monitoring + structured reviews</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Adjust as markets evolve—without losing discipline</div></div>
-                    <div class="b"><i class="fa-solid fa-check"></i><div>Keep communication clear and human</div></div>
-                  </div>
+
+                <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+                  <a class="btn primary" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Start a Conversation</a>
+                  <a class="btn ghost" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify (CRD #2386565)</a>
                 </div>
               </div>
+            </div>
 
-              <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-                <a class="btn primary" href="#engage" data-page="engage"><i class="fa-solid fa-comment-dots"></i> Contact</a>
-                <a class="btn" href="#finra" data-page="finra"><i class="fa-solid fa-magnifying-glass"></i> Verify</a>
+            <!-- NEW IMAGE LINK (as provided) -->
+            <div class="journeyImage" aria-label="Client Journey Visual">
+              <!-- NOTE: ibb.co pages are not direct image files; if you can provide the direct i.ibb.co image URL, swap it here for best results. -->
+              <img src="https://ibb.co/2380TGxB" alt="Client Journey" loading="lazy" />
+            </div>
+          </div>
+
+          <div style="margin-top:18px;" class="panel">
+            <div class="head">
+              <h3>What to expect from us</h3>
+              <p>Clarity in documentation, transparency in communication, and a framework built to evolve with you.</p>
+            </div>
+            <div class="body">
+              <div class="grid3">
+                <div class="card">
+                  <h4>Transparent process</h4>
+                  <p>Each step is explained clearly—what it is, why it matters, and what the decision is.</p>
+                </div>
+                <div class="card">
+                  <h4>Documented execution</h4>
+                  <p>When capital is deployed, it is done with discipline, alignment, and clear documentation.</p>
+                </div>
+                <div class="card">
+                  <h4>Ongoing stewardship</h4>
+                  <p>Review cadence and adjustments as conditions and objectives change—without losing discipline.</p>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </div>
@@ -1477,37 +1401,26 @@
         <div class="container">
           <div class="center">
             <div class="sectionTitle">Contact</div>
-            <p class="subTitle">
-              Ready to explore my strategy? Send a message and we’ll take it from there—clear, confidential, and structured.
-            </p>
+            <p class="subTitle">Ready to explore my strategy? Send a message—clear, confidential, and structured.</p>
           </div>
 
           <div style="margin-top:22px;" class="contactGrid">
             <div class="panel">
               <div class="head">
                 <h3>Direct contact</h3>
-                <p>
-                  Use email or WhatsApp. If you prefer to verify first, use the FINRA/BrokerCheck page.
-                </p>
+                <p>Use email or WhatsApp. CRD #: <strong>2386565</strong>.</p>
               </div>
               <div class="body">
                 <div class="card">
                   <h4>Contact channels</h4>
                   <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-envelope"></i><div><strong>Email:</strong> <span id="contactEmailText"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d0e02031e1801190c190402032d0f181e0e050e0c1d04190c011d0c1f1903081f1e430e0200">[email&#160;protected]</a></span></div></div>
-                    <div class="b"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp:</strong> <span id="contactWhatsText">+1 212 555 8400</span></div></div>
+                    <div class="b"><i class="fa-solid fa-envelope"></i><div><strong>Email:</strong> <span id="contactEmailText">consultation@buschcapitalpartners.com</span></div></div>
+                    <div class="b"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp:</strong> <span id="contactWhatsText">+1 581 386 7957</span></div></div>
                   </div>
                   <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
                     <a class="btn primary" id="emailBtn" href="#"><i class="fa-solid fa-envelope"></i> Email Now</a>
                     <a class="btn" id="waBtn" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                   </div>
-                </div>
-
-                <div class="card" style="margin-top:14px;">
-                  <h4>What to include</h4>
-                  <p>
-                    A short note is enough: your primary objective, time horizon, and any key constraints (liquidity, tax sensitivity, concentration).
-                  </p>
                 </div>
               </div>
             </div>
@@ -1515,9 +1428,7 @@
             <div class="panel">
               <div class="head">
                 <h3>Consultation request (real-time)</h3>
-                <p>
-                  This form submits in real time to <strong>/api/lead</strong> (Cloudflare Worker). You’ll get a confirmation immediately.
-                </p>
+                <p>This form submits to <strong>/api/lead</strong> (Cloudflare Worker).</p>
               </div>
               <div class="body">
                 <form id="leadForm">
@@ -1552,7 +1463,7 @@
                     <i class="fa-solid fa-paper-plane"></i> Submit Request
                   </button>
                   <p style="margin-top:10px; color:rgba(255,255,255,.65); font-size:.95rem; line-height:1.6;">
-                    Educational and informational only — not investment advice. You’ll receive a confirmation once submitted.
+                    Educational and informational only — not investment advice.
                   </p>
                 </form>
               </div>
@@ -1562,9 +1473,7 @@
           <div style="margin-top:18px;" class="panel">
             <div class="head">
               <h3>Disclaimer</h3>
-              <p>
-                The information provided is for educational and informational purposes only and does not constitute investment advice or a recommendation.
-              </p>
+              <p>The information provided is for educational and informational purposes only and does not constitute investment advice or a recommendation.</p>
             </div>
           </div>
         </div>
@@ -1578,14 +1487,14 @@
           <div class="center">
             <div class="sectionTitle">FINRA / BrokerCheck Verification</div>
             <p class="subTitle">
-              Verify registration and background information via FINRA BrokerCheck. This page provides a guided lookup that opens BrokerCheck directly.
+              Verify via FINRA BrokerCheck. Use CRD #<strong>2386565</strong> for faster lookup.
             </p>
           </div>
 
           <div style="margin-top:22px;" class="panel">
             <div class="head">
               <h3>Guided verification</h3>
-              <p>Search by person name, firm name, or CRD (if available). Links open BrokerCheck in a new tab.</p>
+              <p>Search by person name, firm name, or CRD. Links open BrokerCheck in a new tab.</p>
             </div>
             <div class="body">
               <div class="grid2">
@@ -1599,8 +1508,8 @@
                     <input id="bcFirm" placeholder="Busch Capital Partners" value="Busch Capital Partners" />
                   </div>
                   <div class="field">
-                    <label for="bcCrd">CRD number (optional)</label>
-                    <input id="bcCrd" placeholder="Paste CRD number if you have it" />
+                    <label for="bcCrd">CRD number</label>
+                    <input id="bcCrd" placeholder="2386565" value="2386565" />
                   </div>
 
                   <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
@@ -1615,18 +1524,16 @@
                 </div>
 
                 <div class="card">
-                  <h4>What to look for</h4>
+                  <h4>Verification details</h4>
                   <div class="bullets">
-                    <div class="b"><i class="fa-solid fa-id-card"></i><div><strong>CRD number:</strong> confirm you’re viewing the correct profile.</div></div>
-                    <div class="b"><i class="fa-solid fa-clipboard-check"></i><div><strong>Registrations:</strong> current and historical affiliations.</div></div>
-                    <div class="b"><i class="fa-solid fa-triangle-exclamation"></i><div><strong>Disclosures:</strong> if any exist, read details carefully.</div></div>
+                    <div class="b"><i class="fa-solid fa-id-card"></i><div><strong>CRD #:</strong> 2386565</div></div>
+                    <div class="b"><i class="fa-solid fa-clipboard-check"></i><div><strong>Registrations:</strong> current and historical affiliations</div></div>
+                    <div class="b"><i class="fa-solid fa-triangle-exclamation"></i><div><strong>Disclosures:</strong> review if any exist</div></div>
                   </div>
 
                   <div style="margin-top:12px;" class="b">
                     <i class="fa-solid fa-circle-info"></i>
-                    <div>
-                      This page provides convenience links only. The authoritative source is FINRA BrokerCheck.
-                    </div>
+                    <div>This page provides convenience links only. The authoritative source is FINRA BrokerCheck.</div>
                   </div>
 
                   <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
@@ -1638,10 +1545,7 @@
 
               <div class="card" style="margin-top:14px;">
                 <h4>Note on content</h4>
-                <p>
-                  My content is intended for educational and informational purposes only. It is a framework for understanding portfolio construction
-                  and strategic thinking—not a recommendation or individualized investment advice.
-                </p>
+                <p>Content is educational and informational only—no individualized investment advice.</p>
               </div>
             </div>
           </div>
@@ -1655,11 +1559,11 @@
       <div class="footGrid">
         <div>
           <div class="footTitle">Busch Capital Partners</div>
-          <p>
-            Strategy-led wealth management designed for evolving markets—discipline, adaptability, and clarity.
-          </p>
+          <p>Strategy-led wealth management designed for evolving markets—discipline, adaptability, and clarity.</p>
           <p style="color:rgba(255,255,255,.68); margin-top:10px;">
-            Domain: <strong>buschcapitalpartners.com</strong>
+            Email: <strong>consultation@buschcapitalpartners.com</strong><br/>
+            WhatsApp: <strong>+1 581 386 7957</strong><br/>
+            CRD: <strong>2386565</strong>
           </p>
         </div>
 
@@ -1675,12 +1579,12 @@
         <div class="footLinks">
           <h4>Contact</h4>
           <a href="#engage" data-page="engage">Email / WhatsApp</a>
-          <a href="#finra" data-page="finra">Verify (BrokerCheck)</a>
+          <a href="#finra" data-page="finra">Verify (CRD #2386565)</a>
         </div>
       </div>
 
       <div class="disclaimer">
-        <p><strong>Disclaimer:</strong> The information provided is for educational and informational purposes only and does not constitute investment advice or a recommendation. Past performance is not indicative of future results. Always consider your personal financial circumstances and consult a qualified professional before making investment decisions.</p>
+        <p><strong>Disclaimer:</strong> The information provided is for educational and informational purposes only and does not constitute investment advice or a recommendation. Past performance is not indicative of future results.</p>
         <p style="margin-top:14px;">© 2026 Busch Capital Partners. All rights reserved.</p>
       </div>
     </div>
@@ -1692,7 +1596,7 @@
     <p id="toastMsg">Done.</p>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     /**
      * REAL-TIME FEATURES REQUIRE THE CLOUDFLARE WORKER:
      * - GET /api/quotes  -> live ticker prices
@@ -1701,9 +1605,10 @@
      */
 
     // ========= Config =========
+    const CRD_NUMBER = "2386565";
     const CONTACT_EMAIL = "consultation@buschcapitalpartners.com";
-    const WHATSAPP_NUMBER = "+1 212 555 8400"; // change to your real WhatsApp
-    const WHATSAPP_LINK = "https://wa.me/12125558400"; // update as needed
+    const WHATSAPP_NUMBER = "+1 581 386 7957";
+    const WHATSAPP_LINK = "https://wa.me/15813867957";
 
     // Market symbols for the ticker (Worker maps these to correct sources)
     const TICKER_SYMBOLS = [
@@ -1804,13 +1709,21 @@
     }
 
     // ========= Contact buttons =========
-    document.getElementById("contactEmailText").textContent = CONTACT_EMAIL;
-    document.getElementById("contactWhatsText").textContent = WHATSAPP_NUMBER;
+    const contactEmailEl = document.getElementById("contactEmailText");
+    const contactWhatsEl = document.getElementById("contactWhatsText");
+    if(contactEmailEl) contactEmailEl.textContent = CONTACT_EMAIL;
+    if(contactWhatsEl) contactWhatsEl.textContent = WHATSAPP_NUMBER;
 
     const emailBtn = document.getElementById("emailBtn");
     const waBtn = document.getElementById("waBtn");
-    emailBtn.href = `mailto:${encodeURIComponent(CONTACT_EMAIL)}?subject=${encodeURIComponent("Consultation Request — Busch Capital Partners")}&body=${encodeURIComponent("Hello David,\n\nI’d like to explore your strategy framework. My primary objective is...\n\nBest,\n")}`;
-    waBtn.href = WHATSAPP_LINK;
+    if(emailBtn){
+      emailBtn.href = `mailto:${encodeURIComponent(CONTACT_EMAIL)}?subject=${encodeURIComponent("Consultation Request — Busch Capital Partners")}&body=${encodeURIComponent("Hello David,\n\nI’d like to explore your strategy framework. My primary objective is...\n\nBest,\n")}`;
+    }
+    if(waBtn) waBtn.href = WHATSAPP_LINK;
+
+    // Ensure FINRA CRD is prefilled
+    const bcCrd = document.getElementById("bcCrd");
+    if (bcCrd) bcCrd.value = CRD_NUMBER;
 
     // ========= Real-time: Live Quotes / Ticker =========
     const tickRow = document.getElementById("tickRow");
@@ -1845,7 +1758,7 @@
         `;
       }).join("");
 
-      tickRow.innerHTML = items + items;
+      if(tickRow) tickRow.innerHTML = items + items;
     }
 
     async function fetchQuotes(){
@@ -1861,17 +1774,17 @@
         if(Array.isArray(data?.quotes)){
           buildTickerItems(data.quotes);
           const now = new Date();
-          tickMeta.textContent = `Updated ${now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}`;
-          statA.textContent = String(data.quotes.length);
+          if(tickMeta) tickMeta.textContent = `Updated ${now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}`;
+          if(statA) statA.textContent = String(data.quotes.length);
         }else{
-          tickMeta.textContent = "Live feed unavailable";
+          if(tickMeta) tickMeta.textContent = "Live feed unavailable";
         }
       }catch(e){
-        tickMeta.textContent = "Live feed unavailable (check Worker)";
+        if(tickMeta) tickMeta.textContent = "Live feed unavailable (check Worker)";
       }
     }
 
-    // ========= Real-time: Live Insights (with image previews) =========
+    // ========= Real-time: Live Insights =========
     const insightsRow = document.getElementById("insightsRow");
     const insMeta = document.getElementById("insMeta");
 
@@ -1881,27 +1794,28 @@
 
     function renderInsights(items){
       const slice = (items || []).slice(0, 4);
-      insightsRow.innerHTML = slice.map(it=>{
-        const img = it.image || "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=70";
-        const src = safeHost(it.link || "");
-        const time = it.published ? new Date(it.published).toLocaleString([], {month:"short", day:"2-digit"}) : "Today";
-        return `
-          <a class="insightCard" href="${it.link}" target="_blank" rel="noopener noreferrer" title="${it.title}">
-            <div class="insImg">
-              <img src="${img}" alt="" loading="lazy" referrerpolicy="no-referrer" />
-            </div>
-            <div class="insBody">
-              <div class="insTitle">${it.title || "Market update"}</div>
-              <div class="insMeta">
-                <span>${src}</span>
-                <span>${time}</span>
+      if(insightsRow){
+        insightsRow.innerHTML = slice.map(it=>{
+          const img = it.image || "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=70";
+          const src = safeHost(it.link || "");
+          const time = it.published ? new Date(it.published).toLocaleString([], {month:"short", day:"2-digit"}) : "Today";
+          return `
+            <a class="insightCard" href="${it.link}" target="_blank" rel="noopener noreferrer" title="${it.title}">
+              <div class="insImg">
+                <img src="${img}" alt="" loading="lazy" referrerpolicy="no-referrer" />
               </div>
-            </div>
-          </a>
-        `;
-      }).join("");
-
-      statC.textContent = String(slice.length);
+              <div class="insBody">
+                <div class="insTitle">${it.title || "Market update"}</div>
+                <div class="insMeta">
+                  <span>${src}</span>
+                  <span>${time}</span>
+                </div>
+              </div>
+            </a>
+          `;
+        }).join("");
+      }
+      if(statC) statC.textContent = String(slice.length);
     }
 
     async function fetchNews(){
@@ -1916,68 +1830,80 @@
         if(Array.isArray(data?.items)){
           renderInsights(data.items);
           const now = new Date();
-          insMeta.textContent = `Updated ${now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}`;
+          if(insMeta) insMeta.textContent = `Updated ${now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}`;
         }else{
-          insMeta.textContent = "Insights unavailable";
+          if(insMeta) insMeta.textContent = "Insights unavailable";
         }
       }catch(e){
-        insMeta.textContent = "Insights unavailable (check Worker)";
+        if(insMeta) insMeta.textContent = "Insights unavailable (check Worker)";
       }
     }
 
     // ========= Real-time: Lead Form =========
     const leadForm = document.getElementById("leadForm");
-    leadForm.addEventListener("submit", async (e)=>{
-      e.preventDefault();
-      const btn = leadForm.querySelector('button[type="submit"]');
-      const original = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    if(leadForm){
+      leadForm.addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const btn = leadForm.querySelector('button[type="submit"]');
+        const original = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
-      const payload = {
-        name: leadForm.name.value.trim(),
-        email: leadForm.email.value.trim(),
-        phone: leadForm.phone.value.trim(),
-        type: leadForm.type.value,
-        message: leadForm.message.value.trim(),
-        source: "buschcapitalpartners.com"
-      };
+        const payload = {
+          name: leadForm.name.value.trim(),
+          email: leadForm.email.value.trim(),
+          phone: leadForm.phone.value.trim(),
+          type: leadForm.type.value,
+          message: leadForm.message.value.trim(),
+          source: "buschcapitalpartners.com"
+        };
 
-      try{
-        const r = await fetch("/api/lead", {
-          method:"POST",
-          headers:{ "Content-Type":"application/json" },
-          body: JSON.stringify(payload)
-        });
-        const data = await r.json().catch(()=>({}));
-        if(!r.ok) throw new Error(data?.error || "submit_failed");
-        showToast("Request received", "Thank you — your message was submitted successfully. We’ll respond as soon as possible.");
-        leadForm.reset();
-      }catch(err){
-        showToast("Couldn’t submit", "Please try again in a moment, or use Email/WhatsApp above.");
-      }finally{
-        btn.disabled = false;
-        btn.innerHTML = original;
-      }
-    });
+        try{
+          const r = await fetch("/api/lead", {
+            method:"POST",
+            headers:{ "Content-Type":"application/json" },
+            body: JSON.stringify(payload)
+          });
+          const data = await r.json().catch(()=>({}));
+          if(!r.ok) throw new Error(data?.error || "submit_failed");
+          showToast("Request received", "Thank you — your message was submitted successfully. We’ll respond as soon as possible.");
+          leadForm.reset();
+        }catch(err){
+          showToast("Couldn’t submit", "Please try again in a moment, or use Email/WhatsApp above.");
+        }finally{
+          btn.disabled = false;
+          btn.innerHTML = original;
+        }
+      });
+    }
 
     // ========= FINRA / BrokerCheck =========
     function openNew(url){ window.open(url, "_blank", "noopener,noreferrer"); }
-    document.getElementById("bcPersonBtn").addEventListener("click", ()=>{
-      const name = document.getElementById("bcName").value.trim();
-      if(!name) return showToast("Missing input", "Enter a person name.");
-      openNew(`https://brokercheck.finra.org/search/genericsearch/individualgrid?query=${encodeURIComponent(name)}`);
-    });
-    document.getElementById("bcFirmBtn").addEventListener("click", ()=>{
-      const firm = document.getElementById("bcFirm").value.trim();
-      if(!firm) return showToast("Missing input", "Enter a firm name.");
-      openNew(`https://brokercheck.finra.org/search/genericsearch/firmgrid?query=${encodeURIComponent(firm)}`);
-    });
-    document.getElementById("bcCrdBtn").addEventListener("click", ()=>{
-      const crd = document.getElementById("bcCrd").value.trim();
-      if(!crd) return showToast("Missing input", "Paste a CRD number (optional field).");
-      openNew(`https://brokercheck.finra.org/search/genericsearch/individualgrid?query=${encodeURIComponent(crd)}`);
-    });
+    const bcPersonBtn = document.getElementById("bcPersonBtn");
+    const bcFirmBtn = document.getElementById("bcFirmBtn");
+    const bcCrdBtn = document.getElementById("bcCrdBtn");
+
+    if(bcPersonBtn){
+      bcPersonBtn.addEventListener("click", ()=>{
+        const name = document.getElementById("bcName").value.trim();
+        if(!name) return showToast("Missing input", "Enter a person name.");
+        openNew(`https://brokercheck.finra.org/search/genericsearch/individualgrid?query=${encodeURIComponent(name)}`);
+      });
+    }
+    if(bcFirmBtn){
+      bcFirmBtn.addEventListener("click", ()=>{
+        const firm = document.getElementById("bcFirm").value.trim();
+        if(!firm) return showToast("Missing input", "Enter a firm name.");
+        openNew(`https://brokercheck.finra.org/search/genericsearch/firmgrid?query=${encodeURIComponent(firm)}`);
+      });
+    }
+    if(bcCrdBtn){
+      bcCrdBtn.addEventListener("click", ()=>{
+        const crd = document.getElementById("bcCrd").value.trim();
+        if(!crd) return showToast("Missing input", "Paste a CRD number.");
+        openNew(`https://brokercheck.finra.org/search/genericsearch/individualgrid?query=${encodeURIComponent(crd)}`);
+      });
+    }
 
     // ========= Boot =========
     (async ()=>{
@@ -1987,6 +1913,5 @@
       setInterval(refreshInsights, 120_000);
     })();
   </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"bf4bcab0186a470aa850a48c561dd9d3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
